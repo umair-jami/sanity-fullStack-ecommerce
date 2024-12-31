@@ -21,7 +21,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Command as CommandPrimitive } from "cmdk";
 
 export function CategorySelectorComponent({
   categories,
@@ -45,7 +44,7 @@ export function CategorySelectorComponent({
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full sm:w-auto">
-        <CommandPrimitive shouldFilter={false}>
+        <Command>
           <CommandInput
             placeholder="Search Category..."
             className="h-9"
@@ -88,7 +87,7 @@ export function CategorySelectorComponent({
               ))}
             </CommandGroup>
           </CommandList>
-        </CommandPrimitive>
+        </Command>
       </PopoverContent>
     </Popover>
   );
