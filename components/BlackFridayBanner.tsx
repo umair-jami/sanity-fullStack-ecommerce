@@ -3,7 +3,7 @@ import { getActiveSaleByCouponCode } from "@/sanity/lib/sales/getActiveSaleByCou
 import React from "react";
 
 async function BlackFridayBanner() {
-  const sale = await getActiveSaleByCouponCode(COUPON_CODES.BLACKFRIDAY);
+  const sale = await getActiveSaleByCouponCode("NEWYEAR");
   if (!sale?.isActive) return null;
   return (
     <div className="bg-gradient-to-r from-red-600 to-black text-white px-6 py-10 mx-4 mt-2 rounded-lg">
