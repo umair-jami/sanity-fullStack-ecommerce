@@ -6,6 +6,7 @@ import { SanityLive } from "@/sanity/lib/live";
 import { draftMode } from "next/headers";
 import DisableDraftMode from "@/components/ui/DisableDraftMode";
 import { VisualEditing } from "next-sanity";
+import Footer from "@/components/Footer";
 
 const icon ="/Screenshot 2025-01-01 110103.png"
 
@@ -35,6 +36,7 @@ export default async function RootLayout({
           <main>
             <Header />
             {children}
+            <Footer/>
             <SanityLive />
           </main>
         </body>

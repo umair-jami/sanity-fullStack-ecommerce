@@ -50,14 +50,15 @@ export const salesType = defineType({
     select: {
       title: "title",
       discountAmount: "discountAmount",
-      couponCode: "coupenCode",
+      couponCode: "couponCode",
       isActive: "isActive",
     },
     prepare(selection) {
       const { title, discountAmount, couponCode, isActive } = selection;
+      const status = isActive ? "Active" : "Inactive";
       return {
         title,
-        subtitle: `${discountAmount}% off - Code: ${couponCode} - ${status}}`,
+        subtitle: `${discountAmount}% off - Code: ${couponCode} - ${status}`,
       };
     }
   },
