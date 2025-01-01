@@ -9,7 +9,6 @@ import userBasketStore from "@/store/store";
 import { Poppins } from "next/font/google";
 import logo from "../public/Orange and Gray Tag Cart Virtual Shop Logo (1).png"
 import Image from "next/image";
-import { log } from "console";
 
 const poppins = Poppins({
   subsets: ["latin"],
