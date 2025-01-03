@@ -39,7 +39,7 @@ async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
           )}
         </div>
 
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col gap-14">
             <div>
                 <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
                 <div className="text-xl font-semibold mb-4">
