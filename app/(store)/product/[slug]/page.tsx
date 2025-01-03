@@ -21,14 +21,15 @@ async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className={`relative aspect-square overflow-hidden rounded-lg shadow-lg ${isOutOfStock ? "opacity-50" : ""}`}
+          className={`relative aspect-square overflow-hidden rounded-lg  ${isOutOfStock ? "opacity-50" : ""}`}
         >
           {product.image && (
             <Image
               src={imageUrl(product.image).url()}
               alt={product.name ?? "Product Image"}
-              fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
+              width={500}
+              height={300}
+              className="object-cover transition-transform duration-300 hover:scale-105 mx-auto rounded-lg"
             />
           )}
           {isOutOfStock && (
